@@ -1,0 +1,39 @@
+def rss_import(my_RSS):
+    """ This code uses a RSS feed link to output feed data"""
+# Before using this code, get feedparser-5.1.3
+# here: https://code.google.com/p/feedparser/
+    import feedparser
+    return feedparser.parse(my_RSS) 
+
+def num_articles(d):
+    """ This function uses a dictionary input to output number of accessible articles"""
+    num = len(d.entries)
+    return num
+
+# Loop any of these over Num_Articles
+def return_entry(num):
+    return d.entries[num]
+
+def return_link(num):
+    """ returns link with a u' in front of it for some reason"""
+    return d.entries[num].link
+
+def return_title(num):
+    return d.entries[num].title
+
+def return_date(num):
+    return d.entries[num].published
+
+# CALING IT
+d = rss_import('http://www.marketwatch.com/rss/topstories')
+num = num_articles(d)
+for i in range(num):
+    print return_title(i)
+for i in range(num):
+    print return_link(i)
+
+# USEFUL LINKS
+# http://feedly.com/index.html#opml
+# http://pythonhosted.org/feedparser/common-rss-elements.html
+# http://feeds.feedburner.com/fastcompany/headlines
+# http://allthingsd.com/feed/
