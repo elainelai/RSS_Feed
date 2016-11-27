@@ -1,7 +1,7 @@
 RSS_Feed
 ========
 
-This code uses Python to access RSS Feed information
+This code uses Python to access RSS Feed information - a portion of a StockTwits bot.
 
 
 1. Add media source to Feedly RSS feed. 
